@@ -1,0 +1,10 @@
+.card{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background: aqua;
+}
+
+.blue{
+    background: blue;
+}
