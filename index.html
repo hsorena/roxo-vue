@@ -10,7 +10,27 @@
 </head>
 <body>
     <div id="root">
-        
+        <button type="button" v-on:click="changeLink">تغییر لینک</button>
+        <a v-bind:href="link">{{linkTitle}}</a>
+
+        <button type="button" @click="changeLink">تغییر لینک</button>
+        <a :href="link">{{linkTitle}}</a>
+        <hr>
+        <div>
+            <h1>Dynamic classes</h1>
+            <div class="card" :class="{red:attachRed , blue:!attachRed}" @click="attachRed = !attachRed"></div>
+            <div class="card" :class="divClasses" @click="attachRed = !attachRed"></div>
+            <div class="card" :class="color"></div>
+            <input type="text" v-model="color">
+            <hr>
+            <h1>Dynamic styles</h1>
+            <div class="card" :style="{backgroundColor: bgColor}"></div>
+            <div class="card" :style="divStyles"></div>
+            <div class="card" ></div>
+
+            <input type="text" v-model="bgColor">
+            <input type="text" v-model="width">
+        </div>
     </div>
 
 
