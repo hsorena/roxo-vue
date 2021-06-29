@@ -10,7 +10,32 @@
 </head>
 <body>
     <div id="root">
-
+        <!--        این دستور یک المان را حدف و اضافه میکند-->
+        <p v-if="show">You can see this</p>
+        <p v-else="show">You can not see this</p>
+        <hr>
+        <!--این دستور المان را مخفی میکتد-->
+        <p v-show="show">You can not see this</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        <button type="button" @click="show = !show">change state</button>
+        <hr>
+        <ul>
+            <li v-for="(food , i) in foods">({{i+1}}) - {{food}}</li>
+        </ul>
+        <input type="text" v-model="newFood">
+        <button type="button" @click="foods.push(newFood)">Add New Food</button>
+        <hr>
+        <ul>
+            <li v-for="person in persons"><hr>
+                <span v-for="(value , key) in person">
+                    {{ key }} : {{ value }} <br>
+                </span>
+            </li>
+        </ul>
+        <hr>
+        <ul>
+            <li v-for="n in 10">{{n}}</li>
+        </ul>
 
     </div>
 
